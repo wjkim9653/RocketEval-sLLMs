@@ -8,6 +8,7 @@
 <a href="https://openreview.net/forum?id=zJjzNj6QUe"><img src="https://img.shields.io/badge/OpenReview-zJjzNj6QUe-red"></a>
 <!-- <a href="https://arxiv.org/abs/25XX.XXXXX><img src="https://img.shields.io/badge/arXiv-25XX.XXXXX-orange"></a> -->
 <a href="https://github.com/Joinn99/RocketEval-ICLR/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/Joinn99/RocketEval-ICLR"></a>
+<a href="https://huggingface.co/datasets/Joinn/RocketEval"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow"></a>
 <a href="https://colab.research.google.com/github/Joinn99/RocketEval-ICLR/blob/main/Evaluate-LLM-in-Colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg"></a>
 </p>
 
