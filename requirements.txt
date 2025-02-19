@@ -1,0 +1,6 @@
+openai
+datasets
+vllm>=0.7.2
+scikit-learn
+rich
+tabulate

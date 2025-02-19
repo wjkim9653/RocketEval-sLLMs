@@ -1,0 +1,9 @@
+model: Qwen/Qwen2.5-0.5B-Instruct
+trust_remote_code: true
+tensor_parallel_size: 1
+gpu_memory_utilization: 0.9
+max_model_len: 2400
+dtype: half
+seed: 0
+max_num_seqs: 512
+enable_prefix_caching: true

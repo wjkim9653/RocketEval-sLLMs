@@ -1,0 +1,9 @@
+model: Qwen/Qwen2.5-0.5B-Instruct    # The model used, can be a local path or a huggingface model repo
+trust_remote_code: true              
+tensor_parallel_size: 1              
+gpu_memory_utilization: 0.9          
+max_model_len: 4096                  # Increase the maximum context length only when necessary.
+dtype: auto                          
+seed: 0                              
+max_num_seqs: 512                    # The maximum number of sequences to use. Both too high or too low will lead to efficiency degradation.
+enable_prefix_caching: true          # Whether to enable prefix caching. Recommended for grading tasks.
