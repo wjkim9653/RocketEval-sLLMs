@@ -34,15 +34,16 @@
 ## 🔧 Installation
 You can install RocketEval by running the following commands:
 ```bash
-git clone https://github.com/Joinn99/RocketEval-ICLR.git
-cd RocketEval-ICLR
+git clone https://github.com/wjkim9653/RocketEval-sLLMs.git
+cd RocketEval-sLLMs
 pip install -r requirements.txt
+cd ..
 ```
 
 ## 📦 Download Data
 The data includes the queries, generated checklists, and responses are stored on [HuggingFace](https://huggingface.co/datasets/Joinn/RocketEval). You can download the data by running the following commands:
 ```bash
-git clone https://huggingface.co/datasets/Joinn/RocketEval && mv RocketEval RocketEval-ICLR/data
+git clone https://huggingface.co/datasets/wjkim9653/RocketEval-sLLMs && mv RocketEval-sLLMs RocketEval-sLLMs/data
 ```
 Alternatively, you can download the data and extract the files manually.
 > Notice: Please install [Git LFS](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md) first to clone the data files.
@@ -52,7 +53,7 @@ You can start the evaluation on the example `mt-bench` benchmark dataset by runn
 
 ```bash
 DATASET=mt-bench
-GENERATOR=Deepseek-R1
+GENERATOR=meta-llama/Meta-Llama-3-8B-Instruct
 JUDGE=Qwen2.5-1.5B-Instruct
 LABELER=gpt-4o
 

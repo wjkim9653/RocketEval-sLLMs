@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/workspace/RocketEval-sLLMs/train/sft_lora.py", line 155, in <module>
+    trainer.train()
+  File "/usr/local/lib/python3.10/dist-packages/transformers/trainer.py", line 2245, in train
+    return inner_training_loop(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/trainer.py", line 2469, in _inner_training_loop
+    self.control = self.callback_handler.on_train_begin(args, self.state, self.control)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/trainer_callback.py", line 506, in on_train_begin
+    return self.call_event("on_train_begin", args, state, control)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/trainer_callback.py", line 556, in call_event
+    result = getattr(callback, event)(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/integrations/integration_utils.py", line 930, in on_train_begin
+    self.setup(args, state, model, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/integrations/integration_utils.py", line 895, in setup
+    model_artifact = self._wandb.Artifact(
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/artifacts/artifact.py", line 131, in __init__
+    raise ValueError(
+ValueError: Artifact name may only contain alphanumeric characters, dashes, underscores, and dots. Invalid name: model-RocketEval-sLLMs-(1)
