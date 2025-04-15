@@ -41,7 +41,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--context_window",
     type=int,
-    default=6144,
+    default=8012,
     help="Context Window Size for LLaMA3 (defaults to 6144. maximum 8012)",
 )
 parser.add_argument("--lora_rank", type=int, default=16, help="Rank for LoRA")
@@ -58,7 +58,7 @@ parser.add_argument(
 parser.add_argument(
     "--checkpointing_ratio",
     type=float,
-    default=0.25,
+    default=0.01,
     help="Percentage of Epochs to be Completed Before a Model Saving Happens",
 )
 parser.add_argument("--fp16", action="store_true", default=True, help="whether or not to use FP16")
@@ -109,8 +109,8 @@ if args.test:
     train_dir = "data/train_data/trainset_merged_train.jsonl"
     validation_dir = "data/train_data/trainset_merged_val.jsonl"
 else:
-    train_dir = "data/train_data/trainset_merged_train.jsonl"
-    validation_dir = "data/train_data/trainset_merged_val.jsonl"
+    train_dir = "data/train_data/lmsys_chat_1m_en_expand_gold_final_train.jsonl"
+    validation_dir = "data/train_data/lmsys_chat_1m_en_expand_gold_final_eval.jsonl"
 
 dataset = load_dataset(
     "json", data_files={"train": train_dir, "validation": validation_dir}
@@ -120,7 +120,7 @@ peft_model = get_peft_model(base_model, lora_config)
 
 # 4: Train the PeftModel (same way as training base model)
 sft_config = SFTConfig(
-    output_dir="./Models/",
+    output_dir="./Models/v0_3",
     dataset_text_field="text",
     max_seq_length=args.context_window,
     num_train_epochs=args.epochs,
