@@ -2,3 +2,4 @@
 *.tsv
 data/*
 /Models
+envvars.sh
