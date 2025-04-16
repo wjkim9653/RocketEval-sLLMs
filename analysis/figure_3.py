@@ -10,7 +10,7 @@ week_timestamp = "240416"
 
 # Paths
 json_path = os.path.expanduser(f'config/rankings/{bench}_test.json')
-tsv_dir = os.path.expanduser(f'data/ranking/{bench}')
+tsv_dir = os.path.expanduser(f'data/ranking/{bench}/{week_timestamp}_meeting')
 
 # Load Elo-based model ranking
 with open(json_path, 'r') as f:
@@ -49,7 +49,8 @@ for filename in os.listdir(tsv_dir):
             llm_judge_ranking[model_name] = row['Rank']
         linescores[filename] = scores
         ranking_correlations[filename] = spearman_correlation(dict1=baseline_ranking, dict2=llm_judge_ranking)
-
+# linescores['Elo-Rating'] = elo_rating
+# ranking_correlations['Elo-Rating'] = spearman_correlation(dict1=baseline_ranking, dict2=baseline_ranking)
 print(f'calculated line scores: {linescores}')
 print(f'calculated ranking correlations: {ranking_correlations}')
 

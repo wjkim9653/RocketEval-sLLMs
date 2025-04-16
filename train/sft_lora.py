@@ -8,6 +8,7 @@ from tqdm import tqdm
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
 from torch.utils.data.distributed import DistributedSampler
 from torch.utils import tensorboard
+import warnings
 
 from peft import (
     LoraConfig,
@@ -34,18 +35,16 @@ sys.path.append(
 os.environ["WANDB_PROJECT"] = "RocketEval-sLLMs"
 os.environ["WANDB_LOG_MODEL"] = "checkpoint"
 
-PAD_TOKEN = "<|pad|>"
-
 # Argument parser
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--context_window",
     type=int,
     default=8012,
-    help="Context Window Size for LLaMA3 (defaults to 6144. maximum 8012)",
+    help="Context Window Size for LLaMA3 (defaults to 8012, maximum 8012)",
 )
 parser.add_argument("--lora_rank", type=int, default=16, help="Rank for LoRA")
-parser.add_argument("--epochs", type=int, default=1, help="# of Epochs")
+parser.add_argument("--epochs", type=int, default=4, help="# of Epochs")
 parser.add_argument(
     "--per_device_batch_size", type=int, default=1, help="# of Batches per GPU"
 )
@@ -65,7 +64,7 @@ parser.add_argument("--fp16", action="store_true", default=True, help="whether o
 parser.add_argument(
     "--wandb_run_name",
     type=str,
-    default="RocketEval-sLLMs",
+    default="RocketEval-sLLMs-v0_3",
     help="Wandb Logging Name for this Training Run",
 )
 parser.add_argument(
@@ -73,14 +72,33 @@ parser.add_argument(
     action="store_true",
     help="use very small dataset(~100) to validate the fine-tuning process",
 )
+parser.add_argument(
+    "--ignore_warning",
+    type=bool,
+    default=True
+)
 args = parser.parse_args()
+if args.ignore_warning:
+    warnings.filterwarnings("ignore", category=UserWarning)
+
 
 # set_random_seed(42)
-
+PAD_TOKEN = "<|pad|>"
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
 terminators = [tokenizer.eos_token_id, tokenizer.convert_tokens_to_ids("<|eot_id|>")]
-tokenizer.add_special_tokens({"pad_token": PAD_TOKEN})
+tokenizer.pad_token = PAD_TOKEN
+tokenizer.pad_token_id = tokenizer.convert_tokens_to_ids(PAD_TOKEN)
+tokenizer.add_special_tokens({"pad_token": "<|pad|>"})
 tokenizer.padding_side = "right"
+tokenizer.add_special_tokens({
+    "additional_special_tokens": [
+        "<|start_header_id|>", "<|end_header_id|>",
+        "<|begin_of_query|>", "<|end_of_query|>", 
+        "<|begin_of_reference_response|>", "<|end_of_reference_response|>",
+    ]
+})
+
+print(tokenizer.special_tokens_map)
 
 response_template = "<|end_header_id|>"
 collator = DataCollatorForCompletionOnlyLM(
@@ -109,8 +127,8 @@ if args.test:
     train_dir = "data/train_data/trainset_merged_train.jsonl"
     validation_dir = "data/train_data/trainset_merged_val.jsonl"
 else:
-    train_dir = "data/train_data/lmsys_chat_1m_en_expand_gold_final_train.jsonl"
-    validation_dir = "data/train_data/lmsys_chat_1m_en_expand_gold_final_eval.jsonl"
+    train_dir = "data/train_data/lmsys_chat_1m_en_expand_gold_final.jsonl"
+    validation_dir = "data/train_data/250407_meeting/trainset_merged_val.jsonl"  # "data/train_data/lmsys_chat_1m_en_expand_gold_final_eval.jsonl"
 
 dataset = load_dataset(
     "json", data_files={"train": train_dir, "validation": validation_dir}

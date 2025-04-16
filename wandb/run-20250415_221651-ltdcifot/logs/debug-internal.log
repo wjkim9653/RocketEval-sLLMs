@@ -1,0 +1,15 @@
+{"time":"2025-04-15T22:16:51.356629215Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/workspace/RocketEval-sLLMs/wandb/run-20250415_221651-ltdcifot/logs/debug-core.log"}
+{"time":"2025-04-15T22:16:51.585366131Z","level":"INFO","msg":"created new stream","id":"ltdcifot"}
+{"time":"2025-04-15T22:16:51.586650711Z","level":"INFO","msg":"stream: started","id":"ltdcifot"}
+{"time":"2025-04-15T22:16:51.586843664Z","level":"INFO","msg":"writer: Do: started","stream_id":"ltdcifot"}
+{"time":"2025-04-15T22:16:51.586935716Z","level":"INFO","msg":"handler: started","stream_id":"ltdcifot"}
+{"time":"2025-04-15T22:16:51.586987919Z","level":"INFO","msg":"sender: started","stream_id":"ltdcifot"}
+{"time":"2025-04-15T22:16:51.763809719Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-15T22:18:47.919249022Z","level":"INFO","msg":"stream: closing","id":"ltdcifot"}
+{"time":"2025-04-15T22:18:47.919540615Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-15T22:18:47.922376247Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-15T22:18:48.32763737Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-15T22:18:48.478456565Z","level":"INFO","msg":"handler: closed","stream_id":"ltdcifot"}
+{"time":"2025-04-15T22:18:48.478663327Z","level":"INFO","msg":"writer: Close: closed","stream_id":"ltdcifot"}
+{"time":"2025-04-15T22:18:48.478747082Z","level":"INFO","msg":"sender: closed","stream_id":"ltdcifot"}
+{"time":"2025-04-15T22:18:48.486387834Z","level":"INFO","msg":"stream: closed","id":"ltdcifot"}

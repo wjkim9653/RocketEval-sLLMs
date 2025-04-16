@@ -1,0 +1,15 @@
+{"time":"2025-04-15T22:28:26.382858611Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/workspace/RocketEval-sLLMs/wandb/run-20250415_222826-gumypprq/logs/debug-core.log"}
+{"time":"2025-04-15T22:28:26.636788765Z","level":"INFO","msg":"created new stream","id":"gumypprq"}
+{"time":"2025-04-15T22:28:26.638366917Z","level":"INFO","msg":"stream: started","id":"gumypprq"}
+{"time":"2025-04-15T22:28:26.638591411Z","level":"INFO","msg":"writer: Do: started","stream_id":"gumypprq"}
+{"time":"2025-04-15T22:28:26.638698453Z","level":"INFO","msg":"handler: started","stream_id":"gumypprq"}
+{"time":"2025-04-15T22:28:26.638740483Z","level":"INFO","msg":"sender: started","stream_id":"gumypprq"}
+{"time":"2025-04-15T22:28:26.832908696Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-15T22:29:07.010891223Z","level":"INFO","msg":"stream: closing","id":"gumypprq"}
+{"time":"2025-04-15T22:29:07.01121481Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-15T22:29:07.015668756Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-15T22:29:07.411760896Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-15T22:29:07.546929569Z","level":"INFO","msg":"handler: closed","stream_id":"gumypprq"}
+{"time":"2025-04-15T22:29:07.54703205Z","level":"INFO","msg":"writer: Close: closed","stream_id":"gumypprq"}
+{"time":"2025-04-15T22:29:07.547219044Z","level":"INFO","msg":"sender: closed","stream_id":"gumypprq"}
+{"time":"2025-04-15T22:29:07.551823224Z","level":"INFO","msg":"stream: closed","id":"gumypprq"}

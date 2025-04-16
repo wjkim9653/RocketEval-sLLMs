@@ -1,0 +1,15 @@
+{"time":"2025-04-15T22:30:45.040864882Z","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/workspace/RocketEval-sLLMs/wandb/run-20250415_223044-rrct8px6/logs/debug-core.log"}
+{"time":"2025-04-15T22:30:45.267493884Z","level":"INFO","msg":"created new stream","id":"rrct8px6"}
+{"time":"2025-04-15T22:30:45.26849584Z","level":"INFO","msg":"stream: started","id":"rrct8px6"}
+{"time":"2025-04-15T22:30:45.268631484Z","level":"INFO","msg":"writer: Do: started","stream_id":"rrct8px6"}
+{"time":"2025-04-15T22:30:45.268735442Z","level":"INFO","msg":"handler: started","stream_id":"rrct8px6"}
+{"time":"2025-04-15T22:30:45.268761779Z","level":"INFO","msg":"sender: started","stream_id":"rrct8px6"}
+{"time":"2025-04-15T22:30:45.437467507Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-15T22:43:28.833435897Z","level":"INFO","msg":"stream: closing","id":"rrct8px6"}
+{"time":"2025-04-15T22:43:28.83368315Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-15T22:43:28.835977296Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-15T22:43:29.220913915Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-15T22:43:29.461860516Z","level":"INFO","msg":"handler: closed","stream_id":"rrct8px6"}
+{"time":"2025-04-15T22:43:29.462037183Z","level":"INFO","msg":"writer: Close: closed","stream_id":"rrct8px6"}
+{"time":"2025-04-15T22:43:29.462183219Z","level":"INFO","msg":"sender: closed","stream_id":"rrct8px6"}
+{"time":"2025-04-15T22:43:29.467542556Z","level":"INFO","msg":"stream: closed","id":"rrct8px6"}

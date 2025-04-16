@@ -13,21 +13,25 @@ export OPENAI_BASE_URL=<URL>
 # -------------------------------------FULL TASKS (Re-Implementation)---------------------------------------
 
 # GPT4o/CheckGen Checklist -> Checklist Grading
-python src/run.py --dataset wildbench --generator wjkim9653/Meta-Llama-3-8B-CheckGen-v0-2 --judge Qwen2.5-0.5B-Instruct \
-    --mode offline \
-    --train_test \
-    --gpu_ids "0"
-
-# Checklist Generation -> Checklist Grading
-python src/run.py --dataset wildbench --generator Qwen2.5-0.5B-Instruct --judge Qwen2.5-0.5B-Instruct \
+# python src/run.py --dataset mt-bench --generator GPT-4o --judge Qwen2.5-1.5B-Instruct \
+# python src/run.py --dataset mt-bench --generator wjkim9653/Meta-Llama-3-8B --judge Qwen2.5-1.5B-Instruct \
+python src/run.py --dataset mt-bench --generator wjkim9653/Meta-Llama-3-8B-CheckGen-v0-3-10000 --judge Qwen2.5-1.5B-Instruct \
     --mode offline \
     --train_test \
     --gpu_ids "0" \
-    --gen_checklist  #   --keep_batch_files
+    --keep_batch_files
+
+# Checklist Generation -> Checklist Grading
+python src/run.py --dataset mt-bench --generator Qwen2.5-1.5B-Instruct --judge Qwen2.5-1.5B-Instruct \
+    --mode offline \
+    --train_test \
+    --gpu_ids "0" \
+    --gen_checklist \
+    --keep_batch_files
 
 # ----------------------------------INDIVIDUAL TASKS (Re-Implementation)------------------------------------
 # Running Checklist Generation Task (API mode, using instant API with parallel size 32)
-python src/run_task.py checklist --dataset mt-bench --generator wjkim9653/Llama-3-8B-CheckGen-v0-2 \
+python src/run_task.py checklist --dataset mt-bench --generator wjkim9653/Llama-3-8B-CheckGen-v0-3-10000 \
     --mode offline \
     --gpu_ids "0" \
     --keep_batch_files

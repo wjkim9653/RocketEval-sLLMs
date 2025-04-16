@@ -1,0 +1,209 @@
+  0%|                                                                                                                                                                                                                       | 0/2475 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/trl/trainer/utils.py:145: UserWarning: Could not find response key `<|end_header_id|>` in the following instance: <|begin_of_text|><|begin_of_text|><|start_header_id|>user<end_header_id|>
+
+# Instruction
+You are an helpful assistant who identifies and summarizes key factors in large language models (LLMs) evaluation to help humans evaluate LLMs efficiently.
+
+Feed any query into different LLMs, I will get various responses. I need to know in quick whether these responses follows the instructions and answers the question in the user query better.
+
+I'll provide you with a user query. Your task is to identify those key factors that will affect my judgment and summarize them into a list to improve the efficiency of my evaluation.
+
+# Conversation between User and AI
+
+
+## Current User Query
+<|begin_of_query|>Hello<|end_of_query|>
+
+## Reference Response
+<|begin_of_reference_response|>Hello! How can I help you today?<|end_of_reference_response|>
+
+# Task
+Given the above information, I need you to create a binary question list, so that I can perform an efficient and accurate evaluation through answering several questions.
+
+Your question should be concise and include any necessary key content and information (such as keywords, formats, correct counts and values) in the user query or expected to be shown in responses. Your questions should not only consider evaluating the reference response, but all possible responses. Avoid creating duplicate, cumbersome or vague questions. For example, you should ask "Is this response contain the correct answer..." instead of "Is this response's answer correct?". Ask fewer questions by aggregating questions with repeated contexts into one question.
+
+## Output Format
+Please provide your outputs in the following markdown format by filling in the placeholders in {}:
+```
+1. {question1}
+2. {question2}
+...
+```<|eot_id|><|start_header_id|>assistant<end_header_id|>```
+1. Does the response acknowledge or greet the user?
+2. Is the tone of the response polite and welcoming?
+3. Does the response prompt further interaction or offer assistance?
+```<|eot_id|>. This instance will be ignored in loss calculation. Note, if this happens often, consider increasing the `max_length`.
+  warnings.warn(
+  0%|▏                                                                                                                                                                                                              | 2/2475 [00:01<31:41,  1.30it/s]/usr/local/lib/python3.10/dist-packages/trl/trainer/utils.py:145: UserWarning: Could not find response key `<|end_header_id|>` in the following instance: <|begin_of_text|><|begin_of_text|><|start_header_id|>user<end_header_id|>
+{'loss': 1.5303, 'grad_norm': 12.159409523010254, 'learning_rate': 2e-05, 'num_tokens': 5131.0, 'mean_token_accuracy': 0.6745900064706802, 'epoch': 0.0}
+{'loss': 1.8776, 'grad_norm': 13.934708595275879, 'learning_rate': 1.9991919191919193e-05, 'num_tokens': 7968.0, 'mean_token_accuracy': 0.4374498128890991, 'epoch': 0.0}
+
+# Instruction
+You are an helpful assistant who identifies and summarizes key factors in large language models (LLMs) evaluation to help humans evaluate LLMs efficiently.
+
+Feed any query into different LLMs, I will get various responses. I need to know in quick whether these responses follows the instructions and answers the question in the user query better.
+
+I'll provide you with a user query. Your task is to identify those key factors that will affect my judgment and summarize them into a list to improve the efficiency of my evaluation.
+
+# Conversation between User and AI
+
+
+## Current User Query
+<|begin_of_query|>The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+Answer: Adding all the odd numbers (9, 15, 1) gives 25. The answer is False.
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
+Answer: what is the response?<|end_of_query|>
+
+## Reference Response
+<|begin_of_reference_response|>Adding all the odd numbers (32, 5, 13, 82) gives 118. The answer is False.<|end_of_reference_response|>
+
+# Task
+Given the above information, I need you to create a binary question list, so that I can perform an efficient and accurate evaluation through answering several questions.
+
+Your question should be concise and include any necessary key content and information (such as keywords, formats, correct counts and values) in the user query or expected to be shown in responses. Your questions should not only consider evaluating the reference response, but all possible responses. Avoid creating duplicate, cumbersome or vague questions. For example, you should ask "Is this response contain the correct answer..." instead of "Is this response's answer correct?". Ask fewer questions by aggregating questions with repeated contexts into one question.
+
+## Output Format
+Please provide your outputs in the following markdown format by filling in the placeholders in {}:
+```
+1. {question1}
+2. {question2}
+...
+```<|eot_id|><|start_header_id|>assistant<end_header_id|>```
+1. Does the response correctly identify all the odd numbers from the given group (15, 5, 13, 7, 1) and omit the even numbers?
+2. Does the response correctly compute the sum of the identified odd numbers (should be 15 + 5 + 13 + 7 + 1 = 41)?
+3. Does the response correctly state whether the sum (41) is an even number or not (should be "False")?
+4. Does the response present its calculation steps and clearly state its final verdict?
+```<|eot_id|>. This instance will be ignored in loss calculation. Note, if this happens often, consider increasing the `max_length`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/trl/trainer/utils.py:145: UserWarning: Could not find response key `<|end_header_id|>` in the following instance: <|begin_of_text|><|begin_of_text|><|start_header_id|>user<end_header_id|>
+
+# Instruction
+You are an helpful assistant who identifies and summarizes key factors in large language models (LLMs) evaluation to help humans evaluate LLMs efficiently.
+
+Feed any query into different LLMs, I will get various responses. I need to know in quick whether these responses follows the instructions and answers the question in the user query better.
+
+I'll provide you with a user query. Your task is to identify those key factors that will affect my judgment and summarize them into a list to improve the efficiency of my evaluation.
+
+# Conversation between User and AI
+
+
+## Current User Query
+<|begin_of_query|>Emulate President NAME_1 and describe the events of World War 2 in brief<|end_of_query|>
+
+## Reference Response
+<|begin_of_reference_response|>My fellow Americans, I stand before you today to speak about one of the darkest periods in our nation's history - World War II. This global conflict lasted from 1939 to 1945 and involved nearly every major power on the planet. It was a war that saw the rise of dictatorships and the Holocaust, and the loss of millions of lives.
+
+In 1939, Germany, under the leadership of NAME_2, invaded Poland, which led to the United Kingdom and France declaring war on Germany. Soon after, the Soviet Union was invaded by Germany, and Japan attacked the United States at Pearl Harbor, drawing us into the conflict.
+
+Over the next few years, the Allies, led by the United States, the United Kingdom, and the Soviet Union, fought a long and brutal war against the Axis powers, which included Germany, Italy, and Japan. The war was characterized by massive battles on multiple fronts, including the Eastern Front, where the Soviet Union bore the brunt of the fighting, and the Western Front, where the Allies launched a series of invasions to liberate Europe.
+
+The war also saw the development of new weapons, including atomic bombs, which were used to devastating effect against Japan. In 1945, the Allies emerged victorious, but at a great cost. Millions of lives were lost, including civilians and soldiers, and entire cities were destroyed.
+
+In the years that followed, the world worked to rebuild and prevent such a catastrophic conflict from happening again. The United Nations was established to promote international cooperation and prevent war, and the world has largely enjoyed peace since the end of World War II.
+
+Let us never forget the sacrifices made by those who fought and died in World War II, and let us continue to work towards a world where such horrors are never repeated.<|end_of_reference_response|>
+
+# Task
+Given the above information, I need you to create a binary question list, so that I can perform an efficient and accurate evaluation through answering several questions.
+
+Your question should be concise and include any necessary key content and information (such as keywords, formats, correct counts and values) in the user query or expected to be shown in responses. Your questions should not only consider evaluating the reference response, but all possible responses. Avoid creating duplicate, cumbersome or vague questions. For example, you should ask "Is this response contain the correct answer..." instead of "Is this response's answer correct?". Ask fewer questions by aggregating questions with repeated contexts into one question.
+
+## Output Format
+Please provide your outputs in the following markdown format by filling in the placeholders in {}:
+```
+1. {question1}
+2. {question2}
+...
+```<|eot_id|><|start_header_id|>assistant<end_header_id|>```
+1. Does the response emulate the requested president’s speaking style or persona?
+2. Does the response accurately and concisely summarize the major events of World War II?
+3. Does the response explicitly mention key participants or countries involved in World War II (e.g., United States, United Kingdom, Soviet Union, Germany, Japan, Italy)?
+4. Does the response include the timeframe of World War II (1939-1945)?
+5. Does the response highlight both major causes (such as invasions or attacks) and significant outcomes (such as the formation of the United Nations or use of atomic bombs)?
+6. Does the response directly address the user’s instruction without omitting critical elements or adding unrelated information?
+```<|eot_id|>. This instance will be ignored in loss calculation. Note, if this happens often, consider increasing the `max_length`.
+  warnings.warn(
+  0%|▎                                                                                                                                                                                                              | 3/2475 [00:02<34:50,  1.18it/s]/usr/local/lib/python3.10/dist-packages/trl/trainer/utils.py:145: UserWarning: Could not find response key `<|end_header_id|>` in the following instance: <|begin_of_text|><|begin_of_text|><|start_header_id|>user<end_header_id|>
+{'loss': 1.343, 'grad_norm': 8.330975532531738, 'learning_rate': 1.9983838383838385e-05, 'num_tokens': 16334.0, 'mean_token_accuracy': 0.33249808847904205, 'epoch': 0.0}
+
+# Instruction
+You are an helpful assistant who identifies and summarizes key factors in large language models (LLMs) evaluation to help humans evaluate LLMs efficiently.
+
+Feed any query into different LLMs, I will get various responses. I need to know in quick whether these responses follows the instructions and answers the question in the user query better.
+
+I'll provide you with a user query. Your task is to identify those key factors that will affect my judgment and summarize them into a list to improve the efficiency of my evaluation.
+
+# Conversation between User and AI
+
+
+## Current User Query
+<|begin_of_query|>what<|end_of_query|>
+
+## Reference Response
+<|begin_of_reference_response|>Hello! Is there something specific you would like me to help you with? I'm here to answer any questions you might have.<|end_of_reference_response|>
+
+# Task
+Given the above information, I need you to create a binary question list, so that I can perform an efficient and accurate evaluation through answering several questions.
+
+Your question should be concise and include any necessary key content and information (such as keywords, formats, correct counts and values) in the user query or expected to be shown in responses. Your questions should not only consider evaluating the reference response, but all possible responses. Avoid creating duplicate, cumbersome or vague questions. For example, you should ask "Is this response contain the correct answer..." instead of "Is this response's answer correct?". Ask fewer questions by aggregating questions with repeated contexts into one question.
+
+## Output Format
+Please provide your outputs in the following markdown format by filling in the placeholders in {}:
+```
+1. {question1}
+2. {question2}
+...
+```<|eot_id|><|start_header_id|>assistant<end_header_id|>```
+1. Does the response address the ambiguous or incomplete nature of the user query?
+2. Does the response attempt to clarify the user's intent or request further information?
+3. Is the tone of the response polite and inviting for further user input?
+```<|eot_id|>. This instance will be ignored in loss calculation. Note, if this happens often, consider increasing the `max_length`.
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/trl/trainer/utils.py:145: UserWarning: Could not find response key `<|end_header_id|>` in the following instance: <|begin_of_text|><|begin_of_text|><|start_header_id|>user<end_header_id|>
+
+# Instruction
+You are an helpful assistant who identifies and summarizes key factors in large language models (LLMs) evaluation to help humans evaluate LLMs efficiently.
+
+Feed any query into different LLMs, I will get various responses. I need to know in quick whether these responses follows the instructions and answers the question in the user query better.
+
+I'll provide you with a user query. Your task is to identify those key factors that will affect my judgment and summarize them into a list to improve the efficiency of my evaluation.
+
+# Conversation between User and AI
+
+
+## Current User Query
+<|begin_of_query|>I want to learn latin. Please write ma an easy to understand dialogue. The topic is: music in the catholic liturgy. The interlocutors are a priest and a novice. After each turn, give me the translation in brackets.<|end_of_query|>
+
+## Reference Response
+<|begin_of_reference_response|>Priest: In the Catholic liturgy, music plays an important role.
+Novice: How so?
+Priest: Music helps to create a spiritual atmosphere, and it can be used to accompany different parts of the Mass. For example, hymns can be sung during the processional, while Gregorian chants are often used during the readings and responsorial psalms.
+Novice: That's really interesting. What other kinds of music are used?
+Priest: Other types of music such as contemporary Christian music, gospel, and even some secular music are often incorporated into the liturgy as well.<|end_of_reference_response|>
+
+# Task
+Given the above information, I need you to create a binary question list, so that I can perform an efficient and accurate evaluation through answering several questions.
+
+Your question should be concise and include any necessary key content and information (such as keywords, formats, correct counts and values) in the user query or expected to be shown in responses. Your questions should not only consider evaluating the reference response, but all possible responses. Avoid creating duplicate, cumbersome or vague questions. For example, you should ask "Is this response contain the correct answer..." instead of "Is this response's answer correct?". Ask fewer questions by aggregating questions with repeated contexts into one question.
+
+## Output Format
+Please provide your outputs in the following markdown format by filling in the placeholders in {}:
+```
+1. {question1}
+2. {question2}
+...
+```<|eot_id|><|start_header_id|>assistant<end_header_id|>```
+1. Does the response provide an easy-to-understand dialogue, as requested?
+2. Is the topic of the dialogue centered on music in the Catholic liturgy?
+3. Are the interlocutors explicitly presented as a priest and a novice?
+4. Does each turn in the dialogue include a translation in brackets, as specified?
+5. Is the dialogue written in Latin (or any Latin content present), as requested?
+```<|eot_id|>. This instance will be ignored in loss calculation. Note, if this happens often, consider increasing the `max_length`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/workspace/RocketEval-sLLMs/train/sft_lora.py", line 156, in <module>
+    trainer.train()
+  File "/usr/local/lib/python3.10/dist-packages/transformers/trainer.py", line 2245, in train
+    return inner_training_loop(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/trainer.py", line 2565, in _inner_training_loop
+    and (torch.isnan(tr_loss_step) or torch.isinf(tr_loss_step))
+KeyboardInterrupt

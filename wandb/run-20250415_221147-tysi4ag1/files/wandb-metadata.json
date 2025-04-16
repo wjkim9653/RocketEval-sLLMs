@@ -1,0 +1,42 @@
+{
+  "os": "Linux-6.8.0-52-generic-x86_64-with-glibc2.31",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-04-15T22:11:47.467577Z",
+  "program": "/workspace/RocketEval-sLLMs/train/sft_lora.py",
+  "codePath": "train/sft_lora.py",
+  "git": {
+    "remote": "https://github.com/wjkim9653/RocketEval-sLLMs.git",
+    "commit": "180b254f867a853249df25591e812e2f65f345e5"
+  },
+  "email": "wjkim9653@khu.ac.kr",
+  "root": "/workspace/RocketEval-sLLMs",
+  "host": "eb3d43ca6ddc",
+  "executable": "/usr/bin/python3",
+  "codePathLocal": "train/sft_lora.py",
+  "cpu_count": 112,
+  "cpu_count_logical": 224,
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "53687091200",
+      "used": "27315359744"
+    }
+  },
+  "memory": {
+    "total": "2164115587072"
+  },
+  "cpu": {
+    "count": 112,
+    "countLogical": 224
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "memoryTotal": "85520809984",
+      "cudaCores": 16896,
+      "architecture": "Hopper"
+    }
+  ],
+  "cudaVersion": "12.6"
+}
